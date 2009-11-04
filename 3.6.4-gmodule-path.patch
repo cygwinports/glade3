@@ -1,0 +1,24 @@
+As a last resort, try the system default search path for modules.
+Required for VTE catalog (which uses libvte directly w/o a glade3 module).
+
+--- origsrc/glade3-3.6.4/gladeui/glade-utils.c	2009-04-18 12:52:04.000000000 -0500
++++ src/glade3-3.6.4/gladeui/glade-utils.c	2009-06-07 20:08:03.388356300 -0500
+@@ -1447,7 +1447,7 @@ try_load_library (const gchar *library_p
+ 	gchar   *path;
+ 
+ 	path = g_module_build_path (library_path, library_name);
+-	if (g_file_test (path, G_FILE_TEST_EXISTS))
++	if (!library_path || g_file_test (path, G_FILE_TEST_EXISTS))
+ 	{
+ 		if (!(module = g_module_open (path, G_MODULE_BIND_LAZY)))
+ 			g_warning ("Failed to load %s: %s", path, g_module_error ());
+@@ -1498,6 +1498,9 @@ glade_util_load_library (const gchar *li
+ 	}
+ 
+ 	if (!module)
++		module = try_load_library (NULL, library_name);
++
++	if (!module)
+ 		g_critical ("Unable to load module '%s' from any search paths", library_name);
+ 	
+ 	return module;

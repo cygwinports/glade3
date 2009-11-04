@@ -1,0 +1,17 @@
+inherit gnome2
+
+DESCRIPTION="GNOME GUI builder"
+HOMEPAGE="http://glade.gnome.org/"
+
+PATCH_URI="3.6.4-gmodule-path.patch"
+
+PKG_NAMES="${PN} ${PN}-gnome ${PN}-python libgladeui1_9 libgladeui1-devel"
+glade3_CONTENTS="etc/ usr/bin/glade-3.exe usr/share/applications/ usr/share/doc/
+                 usr/share/gnome/ usr/share/icons/ usr/share/omf/"
+glade3_gnome_CONTENTS="--exclude=*gtk* usr/lib/glade3/modules/*gladegnome*
+                       usr/share/glade3/catalogs/*xml* usr/share/glade3/pixmaps/hicolor/"
+glade3_python_CONTENTS="usr/lib/glade3/modules/*gladepython*"
+libgladeui1_9_CONTENTS="--exclude=*bonobo* --exclude=*canvas* --exclude=*gnome*
+                        usr/bin/cyggladeui-1-9.dll usr/lib/glade3/modules/*gladegtk*
+                        usr/share/glade3/ usr/share/locale/"
+libgladeui1_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'

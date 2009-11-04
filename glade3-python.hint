@@ -1,0 +1,23 @@
+category: Gnome Devel
+requires: libgcc1 libgladeui1_9 libglib2.0_0 python python-gobject2.0 python-gtk2.0
+external-source: glade3
+sdesc: "GTK+ GUI designer (PyGTK custom widget loader)"
+ldesc: "This version of Glade (Glade-3) is a complete rewrite of the original
+Glade codebase.
+
+One of the main differnces from glade-2 is that C code generation has
+been removed from glade-3: this has been done on purpose, since using
+generated code is deprecated; the preferred way to use glade files is
+with libglade (if code generation is needed, this can be provided as
+another tool or plugin, code generation is simply not a part of the
+glade-3 project). Another main difference is that glade-3 was designed
+to make maximal use of GObject introspection, thus easing the
+integration of external toolkits and handling widgets, signals and
+properties genericly; thus making it easier to write fancy features in
+the future (toolkits such as gtk+ itself, gnome, gnome-db and any others
+are implemented externaly as widget catalogs with optional support
+libraries, thus catalogs may be distributed seperatly; possibly along
+with their libglade support modules).
+
+It has a few useful new features such as stacked Undo/Redo and Multiple
+Project support and respects the same XML format as glade-2."
