@@ -21,41 +21,40 @@ It has a few useful new features such as stacked Undo/Redo and Multiple
 Project support and respects the same XML format as glade-2.
 
 Runtime requirements:
-  cygwin-1.7.0-62
-  libcairo2-1.8.8-1
-  libgcc1-4.3.4-1
-  libgdk_pixbuf2.0_0-2.18.3-1
-  libglib2.0_0-2.22.2-1
-  libgtk2.0_0-2.18.3-1
+  cygwin-1.7.5-1
+  libcairo2-1.8.10-1
+  libgcc1-4.3.4-3
+  libgdk_pixbuf2.0_0-2.18.6-1
+  libglib2.0_0-2.22.4-2
+  libgtk2.0_0-2.18.6-1
   libintl8-0.17-11
-  libpango1.0_0-1.26.0-1
-  libxml2-2.7.4-1
+  libpango1.0_0-1.26.2-1
+  libxml2-2.7.7-1
 (glade3-gnome)
   libbonoboui2_0-2.24.2-1
   libgnome2_0-2.28.0-1
   libgnomecanvas2_0-2.26.0-1
   libgnomeui2_0-2.24.2-1
 (glade3-python)
-  python-2.5.4-10
-  python-gobject2.0-2.20.0-1
-  python-gtk2.0-2.16.0-1
+  python-2.6.5-1
+  python-gobject2.0-2.20.0-2
+  python-gtk2.0-2.16.0-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
+  autoconf2.5-2.65-1
   automake1.9-1.9.6-10
-  binutils-2.19.51-1
-  cygport-0.9.10-1
+  binutils-2.20.51-2
+  cygport-0.9.84-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
+  gcc4-core-4.3.4-3
   gnome-common-2.28.0-1
-  gnome-doc-utils-0.18.0-1
-  gtk-doc-1.11-2
-  intltool-0.40.6-1
-  libtool-2.2.7a-14
+  gnome-doc-utils-0.20.1-1
+  gtk-doc-1.14-1
+  intltool-0.41.1-1
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
-  sed-4.1.5-2
 
 Canonical website:
   http://glade.gnome.org/
@@ -83,6 +82,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 3.6.7-2 -----
+Rebuilt for Python 2.6.
 
 ----- version 3.6.7-1 -----
 Version bump.
