@@ -1,7 +1,7 @@
 category: Gnome Devel
-requires: libgladeui1_9 libcairo-devel libglib2.0-devel libgdk_pixbuf2.0-devel libgtk2.0-devel gettext libpango1.0-devel libxml2-devel
+requires: glade3 libcairo-devel libglib2.0-devel libgdk_pixbuf2.0-devel libgtk2.0-devel gettext libpango1.0-devel libxml2-devel
 external-source: glade3
-sdesc: "GTK+ GUI designer (v3 development)"
+sdesc: "GTK+ GUI designer (development)"
 ldesc: "This version of Glade (Glade-3) is a complete rewrite of the original
 Glade codebase.
 

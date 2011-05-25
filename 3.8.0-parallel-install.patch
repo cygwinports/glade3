@@ -1,0 +1,24 @@
+https://bugzilla.gnome.org/show_bug.cgi?id=646997
+
+--- origsrc/glade3-3.8.0/help/Makefile.am	2010-08-16 17:29:00.000000000 -0500
++++ src/glade3-3.8.0/help/Makefile.am	2011-05-24 21:56:05.144455100 -0500
+@@ -2,7 +2,7 @@
+ include $(top_srcdir)/gnome-doc-utils.make
+ dist-hook: doc-dist-hook
+ 
+-DOC_MODULE = glade
++DOC_MODULE = glade3
+ DOC_INCLUDES = legal.xml
+ DOC_FIGURES = figures/main-window.png
+ 
+--- origsrc/glade3-3.8.0/src/main.c	2011-04-04 07:15:05.000000000 -0500
++++ src/glade3-3.8.0/src/main.c	2011-05-24 21:56:05.148455300 -0500
+@@ -39,7 +39,7 @@
+ #  include <windows.h>
+ #endif
+ 
+-#define APPLICATION_NAME (_("Glade"))
++#define APPLICATION_NAME (_("Glade3"))
+ 
+ 
+ /* Application arguments */
