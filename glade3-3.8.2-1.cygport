@@ -3,10 +3,7 @@ inherit gnome2
 DESCRIPTION="GNOME GUI builder"
 HOMEPAGE="http://glade.gnome.org/"
 
-PATCH_URI="
-	3.6.4-gmodule-path.patch
-	3.8.0-parallel-install.patch
-"
+PATCH_URI="3.6.4-gmodule-path.patch"
 
 PKG_NAMES="${PN} ${PN}-devel ${PN}-gnome ${PN}-python"
 glade3_CONTENTS="--exclude=*bonobo* --exclude=*canvas* --exclude=*gnome.*
@@ -17,12 +14,4 @@ glade3_gnome_CONTENTS="--exclude=*gtk* usr/lib/glade3/modules/*gladegnome*
                        usr/share/glade3/catalogs/*xml* usr/share/glade3/pixmaps/hicolor/"
 glade3_python_CONTENTS="usr/lib/glade3/modules/*gladepython*"
 
-CYGPORT_USE_UNSTABLE_API=1
-src_unpack_hook() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=646997
-	mv help/glade.omf.in help/glade3.omf.in
-	for f in help/*/glade.xml
-	do
-		mv $f ${f/glade/glade3}
-	done
-}
+KEEP_LA_FILES="none"
