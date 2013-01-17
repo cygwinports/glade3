@@ -1,0 +1,29 @@
+inherit gnome2
+
+NAME="glade3"
+VERSION=3.8.3
+RELEASE=1
+CATEGORY="GNOME Devel"
+SUMMARY="GTK+2 GUI designer"
+DESCRIPTION="Glade is a RAD tool to enable quick & easy development of user
+interfaces for the GTK+ toolkit and the GNOME desktop environment. The user
+interfaces designed in Glade are saved as XML, and by using the GtkBuilder
+object these can be loaded by applications dynamically as needed. By using
+GtkBuilder, Glade XML files can be used in numerous programming languages
+including C, C++, C#, Vala, Java, Perl, Python, and others."
+HOMEPAGE="http://glade.gnome.org/"
+
+PATCH_URI="3.6.4-gmodule-path.patch"
+
+PKG_NAMES="${PN} ${PN}-devel ${PN}-gnome ${PN}-python"
+glade3_CONTENTS="--exclude=*bonobo* --exclude=*canvas* --exclude=*gnome.*
+                 --exclude=*gnome-* --exclude=gtk-doc
+                 etc/ usr/bin/ usr/lib/glade3/modules/*gladegtk* usr/share/"
+glade3_devel_SUMMARY="${SUMMARY} (development)"
+glade3_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+glade3_gnome_SUMMARY="${SUMMARY} (GNOME libraries catalog)"
+glade3_gnome_CONTENTS="--exclude=*gtk* usr/lib/glade3/modules/*gladegnome*
+                       usr/share/glade3/catalogs/*xml* usr/share/glade3/pixmaps/hicolor/"
+glade3_python_SUMMARY="${SUMMARY} (PyGTK custom widget loader)"
+glade3_python_REQUIRES="python-gobject python-gtk2.0"
+glade3_python_CONTENTS="usr/lib/glade3/modules/*gladepython*"
