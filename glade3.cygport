@@ -1,9 +1,9 @@
 inherit gnome2
 
 NAME="glade3"
-VERSION=3.8.3
+VERSION=3.8.4
 RELEASE=1
-CATEGORY="GNOME Devel"
+CATEGORY="Devel"
 SUMMARY="GTK+2 GUI designer"
 DESCRIPTION="Glade is a RAD tool to enable quick & easy development of user
 interfaces for the GTK+ toolkit and the GNOME desktop environment. The user
@@ -15,7 +15,7 @@ HOMEPAGE="http://glade.gnome.org/"
 
 PATCH_URI="3.6.4-gmodule-path.patch"
 
-PKG_NAMES="${PN} ${PN}-devel ${PN}-gnome ${PN}-python"
+PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-gnome ${NAME}-python"
 glade3_CONTENTS="--exclude=*bonobo* --exclude=*canvas* --exclude=*gnome.*
                  --exclude=*gnome-* --exclude=gtk-doc
                  etc/ usr/bin/ usr/lib/glade3/modules/*gladegtk* usr/share/"
